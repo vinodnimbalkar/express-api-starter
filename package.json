@@ -2,6 +2,8 @@
   "name": "express-api-starter",
   "version": "1.0.0",
   "private": true,
+  "description": "A starter for building production-ready RESTful APIs using Node.js, Express, Mongoose and more.",
+  "main": "app.js",
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
@@ -37,8 +39,6 @@
     "nodemon": "^2.0.6",
     "supertest": "^6.0.1"
   },
-  "description": "A starter for building production-ready RESTful APIs using Node.js, Express, Mongoose and more.",
-  "main": "app.js",
   "directories": {
     "test": "tests"
   },
