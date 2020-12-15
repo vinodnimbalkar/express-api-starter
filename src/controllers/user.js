@@ -1,14 +1,14 @@
 const sharp = require('sharp');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user.js');
-const { sendWelcomeEmail, sendCancelationEmail } = require("../email/account.js");
+const { sendWelcomeEmail, sendCancelationEmail } = require('../email/account.js');
 
 // Create user information in database
 const createUser = async (req, res) => {
   const user = new User(req.body);
 
   try {
-    sendWelcomeEmail(user)
+    sendWelcomeEmail(user);
     const refreshToken = await user.generateAuthToken();
     await user.save();
     res.status(201).send({ user, refreshToken });
@@ -47,7 +47,7 @@ const updateUser = async (req, res) => {
 const deleteUser = async (req, res) => {
   try {
     await req.user.remove();
-    sendCancelationEmail(req.user)
+    sendCancelationEmail(req.user);
     res.send(req.user);
   } catch (e) {
     res.status(500).send();

@@ -3,16 +3,19 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const sendWelcomeEmail = ({ email, firstName, lastName }) => {
-  // eslint-disable-next-line no-console
-  console.log(email, firstName);
   const msg = {
     to: email,
     from: 'help@example.com', // Use the email address or domain you verified above
     subject: 'Thanks for joining in',
-    text: `Welcome to the app, ${firstName} ${lastName}. Let us know how you get along with the app`,
-    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    html: `Welcome to the app, ${firstName} ${lastName}. Let us know how you get along with the app`,
   };
-  sgMail.send(msg);
+  sgMail.send(msg).then(() => {
+    // eslint-disable-next-line no-console
+    console.log('Email sent');
+  }).catch((error) => {
+    // eslint-disable-next-line no-console
+    console.error(error);
+  });
 };
 
 const sendCancelationEmail = ({ email, firstName, lastName }) => {
@@ -22,7 +25,13 @@ const sendCancelationEmail = ({ email, firstName, lastName }) => {
     subject: 'Sorry to see you go!',
     text: `Goodbye, ${firstName} ${lastName}. We hope to see you back sometime soon`,
   };
-  sgMail.send(msg);
+  sgMail.send(msg).then(() => {
+    // eslint-disable-next-line no-console
+    console.log('Email sent');
+  }).catch((error) => {
+    // eslint-disable-next-line no-console
+    console.error(error);
+  });
 };
 
 module.exports = {
