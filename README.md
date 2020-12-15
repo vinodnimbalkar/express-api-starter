@@ -1,6 +1,6 @@
 # Express-API-Starter
 
-> Initially I was using [express-generator](https://expressjs.com/en/starter/generator.html) (still using), but ended-up doing again and again same 'user JWT authentication with refresh token and  suscription plan' so i decided to create git repository.
+> Initially I was using [express-generator](https://expressjs.com/en/starter/generator.html) (still using), but ended-up doing same thing again and again 'user JWT authentication with refresh token and  suscription plan' so i decided to create git repository.
 
 ## Features
 
@@ -14,40 +14,45 @@
 
 ## Dependencies
 
-* express (server)
-* body-parser (reading body data)
-* validator (input validation)
-* helmet (Helmet helps you secure your Express apps by setting various HTTP headers.)
-* cors (enable CORS)
-* mongoose (Mongoose is a MongoDB object modeling tool)
-* morgan (HTTP request logger middleware for node.js)
-* express-rate-limit (ratelimiting endpoints)
-* bcryptjs (password Encryption)
-* jsonwebtoken (jwt creation & signing)
-* compression (compress response bodies)
-* dotenv (It loads environment variables from a .env file into process.env)
-* multer (handling multipart/form-data)
-* sharp (convert large images in common formats to smaller)
-* debug (A tiny JavaScript debugging utility)
-* sendgrid (just want to send email)
+* [express](https://www.npmjs.com/package/express) (server)
+* [body-parser](https://www.npmjs.com/package/body-parser) (reading body data)
+* [validator](https://www.npmjs.com/package/validator) (input validation)
+* [helmet](https://www.npmjs.com/package/helmet) (Helmet helps you secure your Express apps by setting various HTTP headers.)
+* [cors](https://www.npmjs.com/package/cors) (enable CORS)
+* [mongoose](https://www.npmjs.com/package/mongoose) (Mongoose is a MongoDB object modeling tool)
+* [morgan](https://www.npmjs.com/package/morgan) (HTTP request logger middleware for node.js)
+* [express-rate-limit](https://www.npmjs.com/package/express-rate-limit) (ratelimiting endpoints)
+* [bcryptjs](https://www.npmjs.com/package/bcryptjs) (password Encryption)
+* [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) (jwt creation & signing)
+* [compression](https://www.npmjs.com/package/compression) (compress response bodies)
+* [dotenv](https://www.npmjs.com/package/dotenv) (It loads environment variables from a .env file into process.env)
+* [multer](https://www.npmjs.com/package/multer) (handling multipart/form-data)
+* [sharp](https://www.npmjs.com/package/sharp) (convert large images in common formats to smaller)
+* [debug](https://www.npmjs.com/package/debug) (A tiny JavaScript debugging utility)
+* [sendgrid](https://www.npmjs.com/package/@sendgrid/mail) (just want to send email)
 
 ## Dev Dependencies
 
-* nodemon (hot-reload)
-* eslint (ESLint is a linter for the JavaScript programming language.)
-* eslint-config-airbnb-base (Airbnb JavaScript Style)
-* jest (Jest is a delightful JavaScript Testing Framework with a focus on simplicity.)
-* supertest (HTTP assertions made easy via superagent.)
+* [nodemon](https://www.npmjs.com/package/nodemon) (hot-reload)
+* [eslint](https://www.npmjs.com/package/eslint) (ESLint is a linter for the JavaScript programming language.)
+* [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base) (Airbnb JavaScript Style)
+* [jest](https://www.npmjs.com/package/jest) (Jest is a delightful JavaScript Testing Framework with a focus on simplicity.)
+* [supertest](https://www.npmjs.com/package/supertest) (HTTP assertions made easy via superagent.)
 
 ## Installation
 
 1. Clone the project `git clone https://github.com/vinodnimbalkar/express-api-starter.git`.
-2. Install dependencies `npm install`
-3. Create a `.env` file in the root like the `.env.example` file.
-4. For dev you need to have mongodb db locally.
-5. `npm run dev`
+2. `cd express-api-starter`
+3. Make it your own `rm -rf .git && git init && npm init`
+4. Install dependencies `npm install`
+5. Create a `.env` file in the root like the `.env.example` file.
+6. For dev you need to have mongodb db locally.
+7. For dev - `npm run dev`
+8. For lint - `npm run lint`
+9. For test - `npm run test`
 
 ## TODO
+
 * signup email verification by sending OTP
 
 ## Contributing
