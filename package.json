@@ -27,7 +27,7 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^8.9.5",
     "morgan": "~1.9.1",
-    "multer": "^2.0.1",
+    "multer": "^2.0.2",
     "sharp": "^0.32.6",
     "validator": "^13.7.0"
   },
